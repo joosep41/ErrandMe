@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "465726496585",
+    "firebase_url": "https://errandme.firebaseio.com",
+    "project_id": "errandme",
+    "storage_bucket": "errandme.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:465726496585:android:8d0d44a2974f52aa",
+        "android_client_info": {
+          "package_name": "ee.jooseptenn.errandme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "465726496585-64vmseu81k6ottn2bvoqt6v7oq925l9o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbRWBQ7N9_MdcLAvclx-LuCFMiaNm1r5Y"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

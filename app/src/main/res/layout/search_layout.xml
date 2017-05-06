@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fitsSystemWindows="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="14dp"
+        android:layout_marginEnd="14dp"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            tools:ignore="ScrollViewSize">
+
+            <TextView
+                android:id="@+id/search_tag"
+                android:layout_marginTop="25dp"
+                android:text="@string/search_for_errands"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:theme="@style/AppTheme.NoActionBar">
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:hint="@string/search_by_title_keywords"
+                    android:id="@+id/searchTextBox" />
+            </android.support.design.widget.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:orientation="horizontal"
+                android:layout_marginBottom="12dp">
+                <CheckBox
+                    android:id="@+id/keywordsCheckBox"
+                    android:layout_weight="1"
+                    android:layout_gravity="start"
+                    android:text="@string/enable_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"/>
+
+                <CheckBox
+                    android:id="@+id/keywordsCheckBoxAll"
+                    android:layout_weight="1"
+                    android:layout_gravity="end"
+                    android:text="@string/must_match_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginBottom="22dp"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginBottom="18dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/custom_location"
+                    android:enabled="true"
+                    android:hint="@string/enter_search_location" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_below="@id/custom_location"
+                    android:id="@+id/radius_container"
+                    android:weightSum="3">
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:id="@+id/distance_text"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginBottom="28dp"
+                        android:text="@string/distance_string"
+                        />
+
+                    <EditText
+                        android:layout_weight="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:inputType="numberDecimal"
+                        android:hint="@string/enter_radius_km"
+                        android:id="@+id/search_radius"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/pay_container"
+                    android:layout_below="@+id/radius_container"
+                    android:weightSum="3">
+                    <TextView
+                        android:layout_width="80dip"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/pay_text"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginStart="7dp"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:text="@string/minimum_pay"
+                        android:layout_marginBottom="28dp"/>
+
+                    <EditText
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:inputType="numberDecimal"
+                        android:hint="@string/enter_pay_numbers_only"
+                        android:maxLines="1"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                        android:textColorHint="@color/lightGray"
+                        android:id="@+id/minimumPayTextBox"
+                        android:enabled="false"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        tools:ignore="InefficientWeight" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/time_container"
+                    android:layout_below="@+id/pay_container"
+                    android:weightSum="3">
+                    <TextView
+                        android:layout_width="94dip"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/time_text"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginStart="7dp"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:text="@string/completion_time"
+                        android:layout_marginBottom="28dp"/>
+
+                    <EditText
+                        android:layout_weight="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:hint="@string/enter_completion_time"
+                        android:maxLines="1"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                        android:textColorHint="@color/lightGray"
+                        android:id="@+id/timeTextBox"
+                        android:enabled="false"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        tools:ignore="InefficientWeight" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/time_container"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:id="@+id/locationCheckBox"
+                        android:text="@string/use_current_location"
+                        android:layout_gravity="end"
+                        android:checked="false" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:id="@+id/payCheckBox"
+                        android:layout_gravity="start"
+                        android:text="@string/enable_pay_filtering"
+                       />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:id="@+id/timeCheckBox"
+                        android:text="@string/enable_time_filtering"/>
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.AppCompatButton
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/search_button"
+            android:text="@string/search_button"
+            android:layout_marginBottom="30dp"
+            android:textColor="@color/textColorPrimary"
+            android:background="@color/colorPrimary" />
+
+        </LinearLayout>
+
+   </ScrollView>
+
+</RelativeLayout>

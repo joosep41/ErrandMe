@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp">
+        <TextView
+            android:layout_weight="4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/medium_text"
+            android:textColor="@color/colorBlack"
+            android:id="@+id/errand_title"
+            android:layout_marginBottom="5dp"
+            android:focusable="false"
+            android:clickable="false"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.6"
+            android:minHeight="20dip"
+            android:text="@string/location"
+            android:id="@+id/location_button"
+            android:clickable="true"
+            android:textColor="@color/textColorPrimary"
+            android:focusable="false"
+            android:textSize="12sp"
+            android:background="@color/pink"
+            android:enabled="true"
+            android:layout_marginBottom="5dp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="7dp"
+        android:layout_marginEnd="7dp"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:focusable="false"
+            android:clickable="false"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Small Text"
+            android:textColor="@color/colorBlack"
+            android:id="@+id/errand_distance"
+            android:drawableLeft="@drawable/ic_distance"
+            android:drawableStart="@drawable/ic_distance"
+            android:gravity="center"
+             />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:focusable="false"
+            android:clickable="false"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Small Text"
+            android:textColor="@color/colorBlack"
+            android:id="@+id/errand_pay"
+            android:drawableLeft="@drawable/ic_pay"
+            android:drawableStart="@drawable/ic_pay"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:focusable="false"
+            android:clickable="false"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Small Text"
+            android:textColor="@color/colorBlack"
+            android:id="@+id/errand_time"
+            android:drawableLeft="@drawable/ic_time"
+            android:drawableStart="@drawable/ic_time"
+            android:gravity="center" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="7dp"
+        android:layout_marginEnd="7dp"
+        android:orientation="horizontal"
+        android:weightSum="3">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/details"
+            android:id="@+id/details_button"
+            android:minHeight="20dip"
+            android:clickable="true"
+            android:focusable="false"
+            android:enabled="true"
+            android:textSize="12sp"
+            android:textColor="@color/textColorPrimary"
+            android:background="@color/grayblue"
+            android:layout_marginRight="7dp"
+            android:layout_marginEnd="7dp"
+            tools:ignore="ButtonStyle"
+            android:layout_marginBottom="10dp"/>
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="20dip"
+            android:layout_weight="1"
+            android:text="@string/contact"
+            android:id="@+id/contact_button"
+            android:clickable="true"
+            android:focusable="false"
+            android:enabled="true"
+            android:textSize="12sp"
+            android:textColor="@color/textColorPrimary"
+            android:background="@color/grayblue"
+            android:layout_marginRight="7dp"
+            android:layout_marginEnd="7dp"
+            tools:ignore="ButtonStyle"
+            android:layout_marginBottom="10dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="20dip"
+            android:layout_weight="1"
+            android:text="@string/decline"
+            android:id="@+id/decline_button"
+            android:clickable="true"
+            android:focusable="false"
+            android:enabled="true"
+            android:textSize="12sp"
+            android:textColor="@color/textColorPrimary"
+            android:background="@color/grayblue"
+            android:layout_marginRight="7dp"
+            android:layout_marginEnd="7dp"
+            tools:ignore="ButtonStyle"
+            android:layout_marginBottom="10dp"/>
+    </LinearLayout>
+
+</LinearLayout>

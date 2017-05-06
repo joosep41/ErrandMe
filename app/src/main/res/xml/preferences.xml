@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListPreference
+        android:title="@string/pref_privacy_settings"
+        android:key="privacy"
+        android:summary="@string/change_privacy_settings"
+        android:entries="@array/privacy_options"
+        android:entryValues="@array/privacy_values" />
+
+    <Preference
+        android:key="change_personal_information"
+        android:summary="@string/pref_change_person_info_summary"
+        android:title="@string/pref_change_personal_info" >
+    </Preference>
+
+
+</PreferenceScreen>

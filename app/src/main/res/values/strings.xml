@@ -1,0 +1,197 @@
+<resources>
+    <string name="app_name">ErrandMe</string>
+    <string name="Login">Log in</string>
+    <string name="Signup">Sign up</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Register">No account? Sign up!</string>
+    <string name="Register_left">No account?</string>
+    <string name="Register_right">Sign up!</string>
+    <string name="logOut">Log out</string>
+    <string name="Confirm">Confirm</string>
+    <string name="locationCheckBox">Use current location</string>
+    <string name="log_in_progress">Verifying credentials ...</string>
+    <string name="distance_string">Search radius</string>
+    <string name="errands">My Errands</string>
+    <string name="add">Add Errands</string>
+    <string name="search">Search Errands</string>
+    <string name="profile">My profile</string>
+    <string name="myerrands">Active added and accepted errands</string>
+    <string name="adderrands">Add new errand</string>
+    <string name="searcherrands">Search for errands</string>
+    <string name="userprofile">Check your profile</string>
+    <string name="open">open drawer</string>
+    <string name="close">close drawer</string>
+    <string name="no_internet">No internet connection!</string>
+    <string name="no_results">No matching errands found</string>
+    <string name="loading">Loading...</string>
+    <string name="not_accepted">Still available</string>
+    <string name="accepted">Accepted by</string>
+    <string name="disance">Distance:</string>
+    <string name="pay">Pay:</string>
+    <string name="choose_shared_data">Privacy options</string>
+    <string name="privacy_question">Choose the information that will be shared with other app users. The information can be used by other users to contact you when they are running your errands or you are running theirs.</string>
+    <string name="ok">Ok</string>
+    <string name="cancel">Cancel</string>
+    <string name="phone_number">Phone number</string>
+    <string name="email">Email address</string>
+    <string name="both">Both</string>
+    <string name="pref_privacy_settings">Shared information</string>
+    <string name="change_privacy_settings">Change the information that will help other app users contact you</string>
+    <string name="pref_change_person_info_summary">Change your Phone number or contact email address</string>
+    <string name="pref_change_personal_info">Change contact information</string>
+    <string name="email_short">Email:</string>
+    <string name="phone_number_colon">Phone:</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="confirm">Confirm</string>
+    <string name="add_errand_no_location">In order for the application to detect location settings, you have to reopen the application.</string>
+    <string name="edit_errand_no_location">To use the \"Use current location\" option you need to allow this app to use location data. Enable the use of location and reopen the application or write the address.</string>
+    <string name="close_dialog">Close</string>
+    <string name="deny_location">Without location support you can\'t add or search for errands with the \"Use current location\" option and you will not receive distance updates when moving towards an errand location. To enable or disable location you have to navigate to the app\'s permission settings from your device\'s Settings app.</string>
+    <string name="invalid_credentials">Invalid email or password.</string>
+    <string name="search_errands_no_location">To search for errands with \"Use current location\" the app will need to use your location. Enable the use of location and reopen the application or write the address.</string>
+    <string name="no_shared_information">Please choose the contact information that other users can see. Without making any of your contact information public, other users can not contact you. To choose the shared information you can navigate to Settings.</string>
+    <string name="run_success">Errand successfully accepted!</string>
+    <string name="nothing_left">Nothing to display</string>
+    <string name="no_active_errands">No active errands to display</string>
+    <string name="enable_pay_filtering">Enable pay filtering</string>
+    <string name="enable_search">Enable search</string>
+    <string name="enter_pay_numbers_only">Enter pay (numbers only)</string>
+    <string name="enter_radius_km">Enter radius (km)</string>
+    <string name="enter_search_location">Enter search location</string>
+    <string name="minimum_pay">Minimum pay</string>
+    <string name="must_match_all">Must match all</string>
+    <string name="search_by_title_keywords">Title keywords (comma separated)</string>
+    <string name="search_for_errands">Search for errands</string>
+    <string name="search_button">Search</string>
+    <string name="use_current_location">Use current location</string>
+    <string name="contact">Contact</string>
+    <string name="decline">DECLINE</string>
+    <string name="details">Details</string>
+    <string name="location">Location</string>
+    <string name="medium_text">Medium text</string>
+    <string name="edit">Edit</string>
+    <string name="remove">Remove</string>
+    <string name="small_text">Small text</string>
+    <string name="text">text</string>
+    <string name="e_mail">Email</string>
+    <string name="errandme">ErrandMe</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="register">Register</string>
+    <string name="description">Description</string>
+    <string name="errand_title">Errand title</string>
+    <string name="location_include_country_and_city">Location (include country and city)</string>
+    <string name="pay_no_colon">Pay</string>
+    <string name="e_mail_address">Email address</string>
+    <string name="run">Run</string>
+    <string name="decline_errand">Are you sure you want to decline this errand?</string>
+    <string name="remove_errand">Are you sure you want to remove this errand?</string>
+    <string name="enter_title">Please enter the title</string>
+    <string name="enter_description">Please enter the description</string>
+    <string name="enter_location">Please enter the location</string>
+    <string name="enter_pay">Please enter the pay</string>
+    <string name="enter_number">Please enter a number</string>
+    <string name="enter_positive_number">Please enter a positive number</string>
+    <string name="valid_location">Please enter a valid location</string>
+    <string name="problem_getting_location">There was a problem with getting your location. Check your Location settings and internet connection.</string>
+    <string name="existing_errand">You already have an active errand with that title. Please choose a different title.</string>
+    <string name="errand_accepted">Errand accepted</string>
+    <string name="errand_space">Errand</string>
+    <string name="accepted_by">has been accepted by</string>
+    <string name="errand_declined">Errand declined</string>
+    <string name="been_declined">has been declined</string>
+    <string name="errand_removed">Errand removed</string>
+    <string name="been_removed">has been removed</string>
+    <string name="enable_location">Enable Location</string>
+    <string name="location_off">Your Location is set to \'Off\'.\nIt is recommended to enable Location to be able to use all of the features of the application.</string>
+    <string name="location_settings">Location Settings</string>
+    <string name="wrong_email_or_password">Wrong email or password</string>
+    <string name="enter_email">Please enter your email</string>
+    <string name="enter_password">Please enter a password</string>
+    <string name="invalid_password_format">Invalid password format</string>
+    <string name="settings">Settings</string>
+    <string name="my_errands">My Errands</string>
+    <string name="add_errands">Add Errands</string>
+    <string name="search_errands">Search Errands</string>
+    <string name="valid_name">Enter a valid name</string>
+    <string name="valid_phone">Enter a valid phone number</string>
+    <string name="invalid_email_format">Invalid email format</string>
+    <string name="password_length">Password must be between 8 and 25 characters</string>
+    <string name="password_match">Passwords don\'t match</string>
+    <string name="account_exists">An account with that email already exists</string>
+    <string name="enter_distance">Please enter the distance</string>
+    <string name="distance_not_numeric">The distance must be a number</string>
+    <string name="enter_positive_distance">The distance must be a positive number</string>
+    <string name="privacy">privacy</string>
+    <string name="change_personal_information">change_personal_information</string>
+    <string name="errand_time">Estimated completion time (minutes)</string>
+    <string name="use_time_estimation">Use time estimation</string>
+    <string name="enter_time">The estimated completion time must be a number</string>
+    <string name="enter_completion_time">Enter time (minutes)</string>
+    <string name="completion_time">Completion time</string>
+    <string name="enable_time_filtering">Enable time filtering</string>
+    <string name="estimated_completion_time">Estimated completion time</string>
+    <string name="long_description">The description can be up to 2000 characters long</string>
+    <string name="long_title">The title can be up to 200 characters long</string>
+    <string name="long_pay">The pay can be up to 20 digits long</string>
+    <string name="errand_already_removed">The errand has already been removed by the submitter.</string>
+    <string name="add_errand_enable_location">To use the \"Use current location\"  option you need to enable Location on your device. Enable Location and reopen the application or write the address.</string>
+    <string name="issue_getting_location">There was an issue with getting your location. Try reopening the application.</string>
+    <string name="no_permission">The application does not have permission to use your location. Enable permission from the Permission settings of the app.</string>
+    <string name="register_progress">Attempting to create account ...</string>
+    <string name="LoginGoogle">Google login</string>
+    <string name="default_id">465726496585-64vmseu81k6ottn2bvoqt6v7oq925l9o.apps.googleusercontent.com</string>
+    <string name="name">Name</string>
+    <string name="please_wait">Please wait...</string>
+    <string name="google_log_in">Google_log_in</string>
+    <string name="set_phone_number">Please enter your phone number.</string>
+    <string name="phone_number_short">Phone</string>
+    <string name="location_inaccuracy">To verify if an errand\'s address is correct, please check its details after it has been created. Depending on your location, the location obtained might be inaccurate. If the address is inaccurate, try disabling GPS, changing the device\'s location settings or writing the address manually. To change the address, you must edit the errand.</string>
+    <string name="add_inaccuracy">add_inaccuracy</string>
+    <string name="search_inaccuracy">search_inaccuracy</string>
+    <string name="location_inaccuracy_search">The location obtained by the application can be inaccurate. If you are outdoors, GPS should give the most accurate location; enable GPS usage if it is not enabled already. If you are indoors, consider disabling GPS if it is enabled.</string>
+
+    <string-array name="currency_array">
+        <item>EUR</item>
+        <item>USD</item>
+        <item>AUD</item>
+        <item>GBP</item>
+        <item>CAD</item>
+        <item>JPY</item>
+        <item>CHF</item>
+        <item>SEK</item>
+        <item>MXN</item>
+        <item>NZD</item>
+        <item>SGD</item>
+        <item>HKD</item>
+        <item>NOK</item>
+        <item>KRW</item>
+        <item>TRY</item>
+        <item>INR</item>
+        <item>RUB</item>
+        <item>BRL</item>
+        <item>ZAR</item>
+    </string-array>
+    
+    <string-array name="privacy_options">
+        <item>Phone number</item>
+        <item>Email address</item>
+        <item>Both</item>
+    </string-array>
+
+    <string-array name="privacy_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <string-array name="distance_array">
+        <item>1 km</item>
+        <item>3 km</item>
+        <item>5 km</item>
+        <item>10 km</item>
+    </string-array>
+
+</resources>

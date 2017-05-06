@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="navigation_item_array">
+        <item>My Errands</item>
+        <item>Add Errands</item>
+        <item>Search Errands</item>
+        <item>Settings</item>
+        <item>Log out</item>
+    </string-array>
+</resources>
