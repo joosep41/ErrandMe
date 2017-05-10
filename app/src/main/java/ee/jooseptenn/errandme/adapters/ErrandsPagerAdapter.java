@@ -11,7 +11,7 @@ import ee.jooseptenn.errandme.fragments.ActiveErrandFragment;
  * Adapter for swiping between the AddedErrandsAdapter and the AcceptedErrandsAdapter.
  */
 
-public class ErrandsPagerAdapter extends FragmentPagerAdapter { //https://developer.android.com/training/implementing-navigation/lateral.html
+public class ErrandsPagerAdapter extends FragmentPagerAdapter { //https://developer.android.com/training/implementing-navigation/lateral.html (modified compared to original)
 
     public ErrandsPagerAdapter(FragmentManager fm) {
         super(fm);

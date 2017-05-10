@@ -56,7 +56,7 @@ public class LoginActivity extends AppCompatActivity {
     boolean waitDialogVisible;
     private static Activity mActivity;
 
-    // https://firebase.google.com/docs/auth/android/google-signin
+    // https://github.com/firebase/quickstart-android/blob/master/auth/app/src/main/java/com/google/firebase/quickstart/auth/GoogleSignInActivity.java#L126-L155 (modified compared to original)
     public static GoogleApiClient mGoogleApiClient;
     private static final int RC_SIGN_IN = 1001;
 
@@ -69,13 +69,13 @@ public class LoginActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         myRef = FirebaseDatabase.getInstance().getReference();
 
-        // https://firebase.google.com/docs/auth/android/google-signin
+        // https://github.com/firebase/quickstart-android/blob/master/auth/app/src/main/java/com/google/firebase/quickstart/auth/GoogleSignInActivity.java#L126-L155 (modified compared to original)
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_id))
                 .requestEmail()
                 .build();
 
-        // https://firebase.google.com/docs/auth/android/google-signin
+        // https://github.com/firebase/quickstart-android/blob/master/auth/app/src/main/java/com/google/firebase/quickstart/auth/GoogleSignInActivity.java#L126-L155 (modified compared to original)
         // Build a GoogleApiClient with access to the Google Sign-In API and the
         // options specified by gso.
         mGoogleApiClient = new GoogleApiClient.Builder(this)
@@ -174,7 +174,7 @@ public class LoginActivity extends AppCompatActivity {
         }
 
         // email and password login initialization
-        mAuth.signInWithEmailAndPassword(emailString, passwordString) // https://firebase.google.com/docs/auth/android/password-auth
+        mAuth.signInWithEmailAndPassword(emailString, passwordString) // https://firebase.google.com/docs/auth/android/password-auth (modified compared to original)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
@@ -203,7 +203,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     /**
-     * https://firebase.google.com/docs/auth/android/google-signin
+     * // https://github.com/firebase/quickstart-android/blob/master/auth/app/src/main/java/com/google/firebase/quickstart/auth/GoogleSignInActivity.java#L126-L155 (modified compared to original)
      * A method that initializes the Google sign-in process
      */
     private void signIn() {
@@ -223,7 +223,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     /**
-     * https://firebase.google.com/docs/auth/android/google-signin
+     * // https://github.com/firebase/quickstart-android/blob/master/auth/app/src/main/java/com/google/firebase/quickstart/auth/GoogleSignInActivity.java#L126-L155 (modified compared to original)
      * A method that gets the result of the intent launched with Auth.GoogleSignInApi.getSignInIntent(mGoogleApiClient);
      *
      * @param requestCode request code
@@ -252,7 +252,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     /**
-     * https://firebase.google.com/docs/auth/android/google-signin
+     * // https://github.com/firebase/quickstart-android/blob/master/auth/app/src/main/java/com/google/firebase/quickstart/auth/GoogleSignInActivity.java#L126-L155 (modified compared to original)
      * A method that that tries to sign in with Google credentials
      *
      * @param acct account to sign in with
@@ -371,7 +371,7 @@ public class LoginActivity extends AppCompatActivity {
      *
      * @return true if there is an internet connection false otherwise
      */
-    public static boolean isNetworkAvailable(Context context) { //https://developer.android.com/training/monitoring-device-state/connectivity-monitoring.html
+    public static boolean isNetworkAvailable(Context context) { //https://developer.android.com/training/monitoring-device-state/connectivity-monitoring.html (modified compared to original)
         ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
         return activeNetworkInfo != null && activeNetworkInfo.isConnected();

@@ -14,7 +14,7 @@ import ee.jooseptenn.errandme.adapters.ErrandsPagerAdapter;
  * A fragment that sets the adapter for the ViewPager that is used to switch between the user's activeAddedErrands and activeAcceptedErrands.
  */
 
-public class MyErrandsFragment extends Fragment { //https://developer.android.com/training/implementing-navigation/lateral.html
+public class MyErrandsFragment extends Fragment { //https://developer.android.com/training/implementing-navigation/lateral.html (modified compared to original)
 
     private ErrandsPagerAdapter mErrandsPagerAdapter;
     private ViewPager mViewPager;

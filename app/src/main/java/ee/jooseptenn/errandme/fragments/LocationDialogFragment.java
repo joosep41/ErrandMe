@@ -20,7 +20,7 @@ import ee.jooseptenn.errandme.R;
  * A dialog that displays the location of an errand on a map.
  */
 
-public class LocationDialogFragment extends FragmentActivity implements OnMapReadyCallback { // https://developers.google.com/maps/documentation/android-api/
+public class LocationDialogFragment extends FragmentActivity implements OnMapReadyCallback { // https://developers.google.com/maps/documentation/android-api/ (modified compared to original)
 
     LayoutInflater inflater;
     static View view;

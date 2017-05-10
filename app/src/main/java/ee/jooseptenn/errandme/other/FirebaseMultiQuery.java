@@ -16,7 +16,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 
-// http://stackoverflow.com/questions/38173569/only-load-layout-when-firebase-calls-are-complete
+// http://stackoverflow.com/questions/38173569/only-load-layout-when-firebase-calls-are-complete (modified compared to original)
 public class FirebaseMultiQuery {
     private final HashSet<DatabaseReference> refs = new HashSet<>();
     private final HashMap<DatabaseReference, DataSnapshot> snaps = new HashMap<>();

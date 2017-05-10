@@ -93,9 +93,9 @@ public class AddFragment extends Fragment {
         View view = inflater.inflate(R.layout.add_layout, container, false);
 
         // Set up spinner
-        Spinner spinner = (Spinner) view.findViewById(R.id.currencySpinner); // https://developer.android.com/guide/topics/ui/controls/spinner.html
+        final Spinner currencySpinner = (Spinner) view.findViewById(R.id.currencySpinner); // https://developer.android.com/guide/topics/ui/controls/spinner.html (modified compared to original)
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(adapter);
+        currencySpinner.setAdapter(adapter);
 
         // Get layout elements
         final CheckBox locationCheckBox = (CheckBox) view.findViewById(R.id.checkbox_location);
@@ -104,7 +104,6 @@ public class AddFragment extends Fragment {
         locationEditText = (TextInputEditText) view.findViewById(R.id.locationEditText);
         titleEditText = (TextInputEditText) view.findViewById(R.id.title);
         payEditText = (TextInputEditText) view.findViewById(R.id.pay);
-        final Spinner currencySpinner = (Spinner) view.findViewById(R.id.currencySpinner);
         timeEditText = (TextInputEditText) view.findViewById(R.id.estimatedTime);
         scrollView = (ScrollView) view.findViewById(R.id.addErrandScrollView);
 
@@ -260,7 +259,7 @@ public class AddFragment extends Fragment {
                 String addressRaw = "";
                 if (isValidLocation) { // If user entered location is valid
 
-                    Geocoder geocoder = new Geocoder(activity);  // http://stackoverflow.com/questions/9409195/how-to-get-complete-address-from-latitude-and-longitude
+                    Geocoder geocoder = new Geocoder(activity);  //Geocoder usage http://stackoverflow.com/questions/9409195/how-to-get-complete-address-from-latitude-and-longitude (modified compared to original)
                     List<Address> addresses = null;
 
                     try { // Try to get exact address and coordinates
@@ -308,7 +307,7 @@ public class AddFragment extends Fragment {
                     ((MainActivity) activity).askPermission(); // No location permission. Ask for permission
                 }
                 else {
-                    Geocoder geocoder; // http://stackoverflow.com/questions/9409195/how-to-get-complete-address-from-latitude-and-longitude
+                    Geocoder geocoder; // Geocoder usage http://stackoverflow.com/questions/9409195/how-to-get-complete-address-from-latitude-and-longitude (modified compared to original)
                     List<Address> addresses;
                     geocoder = new Geocoder(activity, Locale.getDefault());
                     try {
@@ -501,7 +500,6 @@ public class AddFragment extends Fragment {
      * @param errand the edited errand
      */
     private static void updateErrand(final Errand errand) {
-        //errandUpdateTime = System.currentTimeMillis();
         myRef.child("errands").child(errand.getId()).runTransaction(new Transaction.Handler() {
             @Override
             public Transaction.Result doTransaction(MutableData mutableData) {

@@ -77,7 +77,7 @@ public class EditDialogFragment extends DialogFragment {
         }
 
         // Set up currency spinner
-        ArrayAdapter<CharSequence> adapter = MainActivity.adapter; // https://developer.android.com/guide/topics/ui/controls/spinner.html
+        ArrayAdapter<CharSequence> adapter = MainActivity.adapter; // https://developer.android.com/guide/topics/ui/controls/spinner.html (modified compared to original)
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         currencySpinner.setAdapter(adapter);
         currencySpinner.setSelection(AddFragment.adapter.getPosition(args.getString("currency")));
@@ -112,7 +112,7 @@ public class EditDialogFragment extends DialogFragment {
             }
         });
 
-        // Dialog creation and setOnShowListener - http://stackoverflow.com/questions/2620444/how-to-prevent-a-dialog-from-closing-when-a-button-is-clicked/9523257
+        // Dialog creation and setOnShowListener - http://stackoverflow.com/questions/2620444/how-to-prevent-a-dialog-from-closing-when-a-button-is-clicked/9523257 (modified compared to original)
 
         final AlertDialog dialog = new AlertDialog.Builder(getActivity())
                 .setView(view)
@@ -182,7 +182,7 @@ public class EditDialogFragment extends DialogFragment {
         return dialog;
     }
 
-    // Scrolling to error messages http://stackoverflow.com/questions/6831671/is-there-a-way-to-programmatically-scroll-a-scroll-view-to-a-specific-edit-text
+    // Scrolling to error messages http://stackoverflow.com/questions/6831671/is-there-a-way-to-programmatically-scroll-a-scroll-view-to-a-specific-edit-text (modified compared to original)
     protected void scrollToErrorMessage(final ScrollView scrollView, final TextInputEditText textInputEditText) {
         if (!scrolledToError) {
             scrollView.post(new Runnable() {

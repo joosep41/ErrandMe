@@ -65,7 +65,7 @@ public class ChangeInformationDialogFragment extends DialogFragment {
             }
         });
 
-        // Dialog creation and setOnShowListener - http://stackoverflow.com/questions/2620444/how-to-prevent-a-dialog-from-closing-when-a-button-is-clicked/9523257
+        // Dialog creation and setOnShowListener - http://stackoverflow.com/questions/2620444/how-to-prevent-a-dialog-from-closing-when-a-button-is-clicked/9523257 (modified compared to original)
         final AlertDialog dialog = new AlertDialog.Builder(getActivity())
                 .setView(view)
                 .setPositiveButton(R.string.confirm, null)

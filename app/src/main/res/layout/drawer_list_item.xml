@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?> <!-- https://developer.android.com/training/implementing-navigation/nav-drawer.html -->
+<?xml version="1.0" encoding="utf-8"?> <!-- https://developer.android.com/training/implementing-navigation/nav-drawer.html (modified compared to original) -->
 <TextView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@android:id/text1"
     android:layout_width="match_parent"

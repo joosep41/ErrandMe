@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
 
     /**
      * location static final values
-     * https://github.com/googlesamples/android-play-location/blob/master/LocationUpdates/app/src/main/java/com/google/android/gms/location/sample/locationupdates/MainActivity.java
+     * https://github.com/googlesamples/android-play-location/blob/master/LocationUpdates/app/src/main/java/com/google/android/gms/location/sample/locationupdates/MainActivity.java (modified compared to original)
      */
     private static final int REQUEST_LOCATION = 1;
     private final static int CONNECTION_FAILURE_RESOLUTION_REQUEST = 9000;
@@ -123,7 +123,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         Intent intent = new Intent((Context) this, ErrandStateService.class);
         startService(intent); // starting ErrandStateService
 
-        // Everything location related - https://github.com/googlesamples/android-play-location/blob/master/LocationUpdates/app/src/main/java/com/google/android/gms/location/sample/locationupdates/MainActivity.java
+        // Everything location related - https://github.com/googlesamples/android-play-location/blob/master/LocationUpdates/app/src/main/java/com/google/android/gms/location/sample/locationupdates/MainActivity.java (modified according to the needs of ErrandMe)
         if (mGoogleApiClient == null) {
             mGoogleApiClient = new GoogleApiClient.Builder(this)
                     .addConnectionCallbacks(this)
@@ -230,7 +230,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     }
 
     /**
-     * https://github.com/googlesamples/android-play-location/blob/master/LocationUpdates/app/src/main/java/com/google/android/gms/location/sample/locationupdates/MainActivity.java
+     * https://github.com/googlesamples/android-play-location/blob/master/LocationUpdates/app/src/main/java/com/google/android/gms/location/sample/locationupdates/MainActivity.java (modified compared to original)
      * A method that starts the loation updates.
      *
      */
@@ -280,7 +280,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
 
     /**
      * https://github.com/googlesamples/android-play-location/blob/master/LocationUpdates/app/src/main/java/com/google/android/gms/location/sample/locationupdates/MainActivity.java
-     * A method that is called after startResolutionForResult().
+     * A method that is called after startResolutionForResult(). (modified compared to original)
      *
      * @param requestCode request code
      * @param resultCode  result code
@@ -341,7 +341,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     /**
      * Runs when a GoogleApiClient object successfully connects.
      *
-     * https://github.com/googlesamples/android-play-location/blob/master/LocationUpdates/app/src/main/java/com/google/android/gms/location/sample/locationupdates/MainActivity.java
+     * https://github.com/googlesamples/android-play-location/blob/master/LocationUpdates/app/src/main/java/com/google/android/gms/location/sample/locationupdates/MainActivity.java (modified compared to original)
      *
      */
     @Override
@@ -378,7 +378,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     /**
      * A method that is called when the GoogleApiCilent connection failed.
      *
-     * https://github.com/googlesamples/android-play-location/blob/master/LocationUpdates/app/src/main/java/com/google/android/gms/location/sample/locationupdates/MainActivity.java
+     * https://github.com/googlesamples/android-play-location/blob/master/LocationUpdates/app/src/main/java/com/google/android/gms/location/sample/locationupdates/MainActivity.java (modified compared to original)
      *
      * @param connectionResult a connection result object
      */
@@ -389,7 +389,6 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
                 // Start an Activity that tries to resolve the error
                 connectionResult.startResolutionForResult(this, CONNECTION_FAILURE_RESOLUTION_REQUEST);
             } catch (IntentSender.SendIntentException e) {
-                e.printStackTrace();
             }
         } else {
 
@@ -468,7 +467,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     /**
      * Stores activity data in the Bundle.
      *
-     * https://github.com/googlesamples/android-play-location/blob/master/LocationUpdates/app/src/main/java/com/google/android/gms/location/sample/locationupdates/MainActivity.java
+     * https://github.com/googlesamples/android-play-location/blob/master/LocationUpdates/app/src/main/java/com/google/android/gms/location/sample/locationupdates/MainActivity.java (modified compared to original)
      *
      */
     public void onSaveInstanceState(Bundle savedInstanceState) {
@@ -529,7 +528,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     }
 
     /**
-     * https://developer.android.com/training/permissions/requesting.html
+     * https://developer.android.com/training/permissions/requesting.html (modified compared to original)
      * A method for asking the user for permission to use Location in the application.
      */
     public void askPermission() {
@@ -538,7 +537,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     }
 
     /**
-     * https://developer.android.com/training/permissions/requesting.html
+     * https://developer.android.com/training/permissions/requesting.html (modified compared to original)
      * A method to handle the result of a permission request (Location permission)
      */
     @Override
@@ -632,7 +631,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
                         "ee.jooseptenn.errandme", Context.MODE_PRIVATE);
                 boolean loggedInWithGoogle = sharedPreferences.getBoolean(getString(R.string.google_log_in), false);
                 if (loggedInWithGoogle) {
-                    // http://stackoverflow.com/questions/38039320/googleapiclient-is-not-connected-yet-on-logout-when-using-firebase-auth-with-g
+                    // http://stackoverflow.com/questions/38039320/googleapiclient-is-not-connected-yet-on-logout-when-using-firebase-auth-with-g (modified compared to original)
                     LoginActivity.mGoogleApiClient.connect();
                     LoginActivity.mGoogleApiClient.registerConnectionCallbacks(new GoogleApiClient.ConnectionCallbacks() {
                         @Override
@@ -707,7 +706,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         getSupportActionBar().setTitle(mTitle);
     }
 
-    // https://developer.android.com/training/implementing-navigation/nav-drawer.html
+    // https://developer.android.com/training/implementing-navigation/nav-drawer.html (modified compared to original)
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
@@ -737,7 +736,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
      * A method that is used to determine how the application reacts when the device's back button is pressed.
      */
     @Override
-    public void onBackPressed() { // http://stackoverflow.com/questions/5448653/how-to-implement-onbackpressed-in-fragments
+    public void onBackPressed() { // http://stackoverflow.com/questions/5448653/how-to-implement-onbackpressed-in-fragments (modified compared to original)
 
         Fragment fragment = getSupportFragmentManager().findFragmentById(R.id.content_frame);
         if (fragment instanceof MyErrandsFragment) {

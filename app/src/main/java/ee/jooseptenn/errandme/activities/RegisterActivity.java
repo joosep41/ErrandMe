@@ -70,7 +70,7 @@ public class RegisterActivity extends Activity {
         mAuth = FirebaseAuth.getInstance();
         myRef = FirebaseDatabase.getInstance().getReference();
 
-        // Listening for changes in the authentication state - https://firebase.google.com/docs/auth/android/password-auth
+        // Listening for changes in the authentication state - https://firebase.google.com/docs/auth/android/password-auth (modified compared to original)
         mAuthListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
@@ -207,7 +207,7 @@ public class RegisterActivity extends Activity {
 
         mAuth = FirebaseAuth.getInstance();
 
-        // https://firebase.google.com/docs/auth/android/password-auth
+        // https://firebase.google.com/docs/auth/android/password-auth (modified compared to original)
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -234,7 +234,7 @@ public class RegisterActivity extends Activity {
         return true;
     }
 
-    // Scrolling to error messages http://stackoverflow.com/questions/6831671/is-there-a-way-to-programmatically-scroll-a-scroll-view-to-a-specific-edit-text
+    // Scrolling to error messages http://stackoverflow.com/questions/6831671/is-there-a-way-to-programmatically-scroll-a-scroll-view-to-a-specific-edit-text (modified compared to original)
     protected void scrollToErrorMessage(final ScrollView scrollView, final TextInputEditText textInputEditText) {
         if (!scrolledToError) {
             scrollView.post(new Runnable() {

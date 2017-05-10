@@ -196,7 +196,7 @@ public class SearchResultsFragment extends Fragment {
         }
         else {
             String addressRaw = "";
-            Geocoder geocoder = new Geocoder(context); // http://stackoverflow.com/questions/9409195/how-to-get-complete-address-from-latitude-and-longitude
+            Geocoder geocoder = new Geocoder(context); // Geocoder usage http://stackoverflow.com/questions/9409195/how-to-get-complete-address-from-latitude-and-longitude (modified compared to original)
             List<Address> addresses = null;
             try {
                 addresses = geocoder.getFromLocationName(location, 1);
@@ -239,7 +239,7 @@ public class SearchResultsFragment extends Fragment {
      * @return          distance between the user entered location and the errand in kilometres
      */
     public static double calculateDistanceFromUser(Errand e, double latitude, double longitude) {
-        // Distance calculation - http://stackoverflow.com/questions/27504947/check-if-a-gps-location-is-within-a-certain-radius-of-another-gps-location-in-an
+        // Distance calculation - http://stackoverflow.com/questions/27504947/check-if-a-gps-location-is-within-a-certain-radius-of-another-gps-location-in-an (modified compared to original)
 
         String[] locationParts = e.getLocation().split(",");
         Double latitudeErrand = Double.valueOf(locationParts[0]);

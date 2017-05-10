@@ -120,7 +120,7 @@ public class ErrandStateService extends IntentService {
                         errandRefs.add(mRef.child("errands").child(s));
                     }
 
-                    // http://stackoverflow.com/questions/38173569/only-load-layout-when-firebase-calls-are-complete
+                    // http://stackoverflow.com/questions/38173569/only-load-layout-when-firebase-calls-are-complete (modified compared to original)
                     FirebaseMultiQuery firebaseMultiQuery = new FirebaseMultiQuery(errandRefs);
                     final Task<Map<DatabaseReference, DataSnapshot>> allLoad = firebaseMultiQuery.start();
                     allLoad.addOnCompleteListener(new AllOnCompleteListener(errandRefs, firebaseMultiQuery));
@@ -203,7 +203,7 @@ public class ErrandStateService extends IntentService {
         }
     }
 
-    // http://stackoverflow.com/questions/38173569/only-load-layout-when-firebase-calls-are-complete
+    // http://stackoverflow.com/questions/38173569/only-load-layout-when-firebase-calls-are-complete (modified compared to original)
     // A class that gets all of the data from the listeners after they have all returned the requested information
     private class AllOnCompleteListener implements OnCompleteListener<Map<DatabaseReference, DataSnapshot>> {
 
@@ -336,7 +336,7 @@ public class ErrandStateService extends IntentService {
                 addedAdapter.updateArrayList(userAddedErrands); // update the content of the adapters based on the new information
                 acceptedAdapter.updateArrayList(userAcceptedErrands);
 
-                Intent broadcastIntent = new Intent(); //http://stackoverflow.com/questions/4823133/send-data-from-service-back-to-my-activity
+                Intent broadcastIntent = new Intent(); //http://stackoverflow.com/questions/4823133/send-data-from-service-back-to-my-activity (modified compared to original)
                 broadcastIntent.setAction(MainActivity.UserStateResponseReceiver.ACTION_RESP); // Send information to MainActivity
                 broadcastIntent.addCategory(Intent.CATEGORY_DEFAULT);
                 broadcastIntent.putExtra("user", user);
@@ -375,7 +375,7 @@ public class ErrandStateService extends IntentService {
      * @param name        the name of the person who accepted an errand if an errand was accepted null otherwise
      * @param state       the type of notification to send
      */
-    private static void sendNotification(Context context, String errandTitle, String name, String state) { //https://developer.android.com/guide/topics/ui/notifiers/notifications.html
+    private static void sendNotification(Context context, String errandTitle, String name, String state) { //https://developer.android.com/guide/topics/ui/notifiers/notifications.html (modified compared to original)
 
         NotificationCompat.Builder mBuilder =
                 new NotificationCompat.Builder(context);

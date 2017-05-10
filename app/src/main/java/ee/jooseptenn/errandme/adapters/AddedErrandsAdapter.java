@@ -143,7 +143,7 @@ public class AddedErrandsAdapter extends BaseAdapter {
                     Drawable dr = mContext.getResources().getDrawable(R.drawable.ic_accepted);
                     Bitmap bitmap = ((BitmapDrawable) dr).getBitmap();
 
-                    Drawable d = new BitmapDrawable(mContext.getResources(), Bitmap.createScaledBitmap(bitmap, 55, 55, true)); // http://stackoverflow.com/questions/7021578/resize-drawable-in-android
+                    Drawable d = new BitmapDrawable(mContext.getResources(), Bitmap.createScaledBitmap(bitmap, 55, 55, true)); // http://stackoverflow.com/questions/7021578/resize-drawable-in-android (modified compared to original)
                     stateView.setCompoundDrawablesWithIntrinsicBounds(d, null, null, null);
                     stateView.setCompoundDrawablePadding(5);
                 }
@@ -159,7 +159,7 @@ public class AddedErrandsAdapter extends BaseAdapter {
             stateView.setText(R.string.not_accepted);
             Drawable dr = mContext.getResources().getDrawable(R.drawable.ic_not_accepted);
             Bitmap bitmap = ((BitmapDrawable) dr).getBitmap();
-            Drawable d = new BitmapDrawable(mContext.getResources(), Bitmap.createScaledBitmap(bitmap, 55, 55, true));
+            Drawable d = new BitmapDrawable(mContext.getResources(), Bitmap.createScaledBitmap(bitmap, 55, 55, true)); // http://stackoverflow.com/questions/7021578/resize-drawable-in-android (modified compared to original)
             stateView.setCompoundDrawablesWithIntrinsicBounds(d, null, null, null);
             stateView.setCompoundDrawablePadding(5);
         }
